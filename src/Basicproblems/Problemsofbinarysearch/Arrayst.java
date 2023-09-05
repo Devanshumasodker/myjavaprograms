@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Arrayst {
     public static void arrayjas(){
         Scanner sc = new Scanner(System.in);
+        // this is used as a comment
         System.out.println("inter size ");
         int size = sc.nextInt();
         int sum = 0;
