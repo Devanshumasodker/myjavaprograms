@@ -12,16 +12,16 @@ public class Intersection_of_two_Strings {
         HashMap<Character,Integer> map = new HashMap<>();
         // here we store the frequency of each character present in first string.
         for (int i = 0; i < s1.length(); i++) {
-            char singlechar = s1.charAt(i);
-            map.put(singlechar, map.getOrDefault(singlechar,0)+1);
+            char character = s1.charAt(i);
+            map.put(character, map.getOrDefault(character,0)+1);
         }
         // here we check the same character present the
         for (int i = 0; i < s2.length(); i++) {
-            char extract_single_char = s2.charAt(i);
-            if (map.containsKey(extract_single_char) && map.get(extract_single_char)>0) {
+            char character = s2.charAt(i);
+            if (map.containsKey(character) && map.get(character)>0) {
 
-                ans.append(extract_single_char);
-                map.put(extract_single_char,map.get(extract_single_char)-1);
+                ans.append(character);
+                map.put(character,map.get(character)-1);
             }
         }
         // here we print the output on the console
