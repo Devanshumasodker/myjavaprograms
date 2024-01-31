@@ -1,38 +1,57 @@
 package Basicproblems;
 
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 // java programme for checking a String contains only ASCII characters.
 public class Ascii_value_of_char {
     public static void main(String[] args) {
-     String s1 = "GeeksforGeeks" ;// contains ASCII characters
-        String s2 = "€_is_a_Symbol_of_euro"; // contains non-ASCII character
+        String s1 = "geeks for geeks";
 
-        boolean checkASCII_for_s1 = true;
-        boolean checkASCII_for_s2 = true;
 
-        for (int i = 0; i < s1.length(); i++) {
-            int Char = s1.charAt(i);
-            if (Char>127) {
-                checkASCII_for_s1 = false;
-                break;
-            }
+        Pattern pat = Pattern.compile("\\b\\w");
+        Matcher Match = pat.matcher(s1);
+
+        StringBuilder answer = new StringBuilder();
+        while (Match.find()) {
+            Match.appendReplacement(answer, Match.group().toUpperCase());
         }
-        for (int i = 0; i < s2.length(); i++) {
-            int Char = s2.charAt(i);
-            if (Char>127) {
-                checkASCII_for_s2 = false;
-                break;
-            }
-        }
+        Match.appendTail(answer);
 
-        System.out.println( "is s1 contains only ASCII characters :"+ checkASCII_for_s1 );
-        System.out.println( "is s2 contains only ASCII characters :"+ checkASCII_for_s2 );
 
-        // TODO using String.matches() method and pass a Regex (regular) expression in the constructor.
+        System.out.println(answer);
 
-        System.out.println( "is s1 contains only ASCII characters :"+ s1.matches("\\A\\p{ASCII}*\\z"));
+        //TODO first one
+//        String str = "this! is. a.. !java test";
+//        Pattern pat = Pattern.compile("\\b(\\w)");
+//        Matcher Match = pat.Match(str);
+//
+//        StringBuffer answer = new StringBuffer();
+//        while (Match.find()) {
+//            Match.appendReplacement(answer, Match.group(1).toUpperCase());
+//        }
+//        Match.appendTail(answer);
+//        System.out.println(answer.toString()); // This Is A Java Test
 
-        System.out.println( "is s2 contains only ASCII characters :"+ s2.matches("\\A\\p{ASCII}*\\z"));
+
+// TODO second one
+
+
+
+
+
+
+
+
+
+
+//        System.out.println( "is s1 contains only ASCII characters :"+ s1.matches("\\A\\p{ASCII}*\\z"));
+//
+//        System.out.println( "is s2 contains only ASCII characters :"+ s2.matches("\\A\\p{ASCII}*\\z"));
 
 
     }
