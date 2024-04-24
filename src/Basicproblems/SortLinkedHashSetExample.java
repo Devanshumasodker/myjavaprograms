@@ -32,8 +32,11 @@ class Employee implements Comparable<Employee>{
 
 public class SortLinkedHashSetExample {
 
-    public static void main(String[] args) {
+    interface A{
+        int method(int a,int b);
+    }
 
+    public static void main(String[] args) {
 
         LinkedHashSet<Employee> SetOfEmployees = new LinkedHashSet<Employee>();
         SetOfEmployees.add( new Employee(3) );
@@ -42,8 +45,18 @@ public class SortLinkedHashSetExample {
 
         //Custom Data
         List<Employee> listUsers = new ArrayList<Employee>( SetOfEmployees );
+//   int a=9;
+//   int b=8;
+        int [] Arr = {1,3,4,5,5};
+
+        String s = "jam am ka";
+//        s.replace("am(.)",was);
 
 
+  A cb= (a,b)->a+b;
+        System.out.println(cb.method(8,9));
+        A cd= (a,b)->a*b;
+        System.out.println(cd.method(8,9));
         Collections.sort(listUsers);
 
         System.out.println(listUsers);
