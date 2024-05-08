@@ -13,7 +13,7 @@ public class Binarysearchalgo {
         int end = arr.length - 1;
         while (start <= end) {
             int midvalue = start +( end -start)/ 2;
-
+/// 1 2 3 4  t = 3
             if (target<arr[midvalue]) {end = midvalue-1;}
 else  if (target>arr[midvalue]) {start = midvalue+1;}
 else
