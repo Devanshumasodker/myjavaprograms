@@ -40,7 +40,7 @@ public class Remove_zeroes_from_a_Number {
 //
 //        }
        // showing the output on the console
-        System.out.println(ans);
+//        System.out.println(ans);
 
 
     }
