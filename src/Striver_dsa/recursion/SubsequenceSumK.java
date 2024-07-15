@@ -83,7 +83,8 @@ public class SubsequenceSumK {
 
     public static void main(String[] args) {
         ArrayList<Integer> ls = new ArrayList<>();
-        int[] arr = {1,2,1};
+        int[] arr = {1,2,1,1};
+        subsequenceUpToK(0,arr,0,ls,3);
 
 
 //    TODO    this is for printing all the subsequence
@@ -94,8 +95,7 @@ public class SubsequenceSumK {
 
 
        // TODO this function is for count how many subsequence
-      int count  = subsequenceUpToK_TotalCount(0,arr,0,2);
-        System.out.println(count);
+
 
 //        this is for print the , anyone subsequence which has some = K;
 

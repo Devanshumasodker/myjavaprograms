@@ -1,4 +1,4 @@
-package Striver_dsa;
+package Striver_dsa.Maths;
 
 import java.util.ArrayList;
 import java.util.List;
