@@ -49,7 +49,7 @@ while (i<j) {
 
     }
     public static void main(String[] args) {
-        int arr [] = {4,6,2,5,7,9,1,3};
+        int arr [] = {4,6,2,5,12,7,9,1,3};
        // int pivot = partionIndex(arr,0,arr.length-1);
         quickSortAlgo(arr,0,arr.length-1);
         System.out.println(Arrays.toString(arr));
