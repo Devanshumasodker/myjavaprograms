@@ -47,7 +47,7 @@ public class MergeSort {
         }
 // TODO devanshu watch striver video at time stamp 40:33 if you still not remember why we are doing this you will get after doing the dry run
         for (int i = low ; i <= high ; i++){
-            System.out.println(temp.get(i-low));
+           // System.out.println(temp.get(i-low));
             a[i] = temp.get(i-low);
         }
 
@@ -57,7 +57,7 @@ public class MergeSort {
     }
     public static void main(String[] args) {
 
-        int []a = {5,4,3,2,1};
+        int []a = {12,9,1,17,2,5,6,2,9,1};
         mergeSort(a,0, a.length-1); // TODO the arrays value will be updated by performing these method
         System.out.println(Arrays.toString(a));
 
